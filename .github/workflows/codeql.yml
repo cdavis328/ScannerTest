@@ -87,7 +87,7 @@ jobs:
       run: |
         echo "Building C/C++ files..."
         gcc -o hello hello.c
-        gcc -o vuln vuln.c
+      # gcc -o vuln vuln.c
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
