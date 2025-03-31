@@ -89,7 +89,7 @@ jobs:
         echo "Building C/C++ files..."
         gcc -o hello hello.c
         gcc -o vuln vuln.c
-
+        codeql database create c-cpp-db --language=c-cpp --command="gcc -o vuln vuln.c"
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
